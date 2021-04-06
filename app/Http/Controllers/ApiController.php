@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\ApiModel;
+use DataTables;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 
@@ -42,8 +43,9 @@ class ApiController extends Controller
     // ]
     public function getProduct()
     {
-        $data=ApiModel::all();
-        return response(['data'=>$data]);
+        //$data=ApiModel::all();
+        return ApiModel::all()->toJson();
+        //return response(['data'=>$data]);
     }
     public function editProduct($id){
         return ApiModel::findOrfail($id);

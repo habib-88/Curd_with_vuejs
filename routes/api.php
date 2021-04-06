@@ -25,7 +25,7 @@ Route::get('editProduct/{id}', [ApiController::class, 'editProduct']);
 Route::patch('updateProduct/{id}', [ApiController::class, 'UpdateProduct']);
 Route::delete('deleteProduct/{id}', [ApiController::class, 'deleteProduct']);
 Route::get('user',function(){
-    User::create([
+    User::create([ 
         "name"=>'test',
         'email'=>"test@gmail.com",
         'password'=>"pass",

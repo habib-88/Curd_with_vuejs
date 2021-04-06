@@ -1,6 +1,7 @@
 require('./bootstrap');
+import Vue from 'vue';
+window.Vue = Vue;
 import VdtnetTable from 'vue-datatables-net'
-
 import 'datatables.net-bs4'
 import 'datatables.net-buttons/js/dataTables.buttons.js'
 import 'datatables.net-buttons/js/buttons.html5.js'
@@ -9,8 +10,6 @@ import 'datatables.net-buttons-bs4'
 import 'datatables.net-select-bs4'
 import 'datatables.net-select-bs4/css/select.bootstrap4.min.css'
 import 'datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css'
-import Vue from 'vue';
-window.Vue = Vue;
 import App from './components/App.vue';
 import VueRouter from 'vue-router';
 import VueAxios from 'vue-axios';
